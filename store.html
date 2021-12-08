@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="assets/css/styles.min.css">
     <link rel="stylesheet" href="assets/css/styles-1.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="assets/js/jquery-3.6.0.min.js">
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 
 <body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('assets/img/bg.jpg');">
@@ -48,65 +50,99 @@
                             <div class="text-start">
                                 <div class="row">
                                     <div class="col"><label class="col-form-label d-lg-flex justify-content-lg-start align-items-lg-center" style="font-size: 20px;" for="tomates">Tomates</label></div>
-                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center">$1.50 lb</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center" value=1.2 id="tomatevalor">$1.20 lb</span></div>
                                     <div class="col text-center d-lg-flex justify-content-lg-center align-items-lg-center">
-                                        <div class="btn-group" role="group"><button class="btn btn-success btn-sm text-end" type="button">+</button><button class="btn btn-danger btn-sm text-end" type="button" style="margin: 0px;margin-right: 10px;">-</button></div>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-success btn-xs button bi bi-cart-plus" type="button" name="tomatemas"></button>
+                                            <button class="btn btn-danger btn-xs button bi bi-cart-dash" type="button" name="tomatemenos" style="margin: 0px;margin-right: 10px;"></button>
+                                        </div>
                                     </div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" name="tomates" value="0" min="0" readonly=""></div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end">$0.00</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center">
+                                        <input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" id="tomates" value=0 min="0" readonly="">
+                                    </div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end" id="tomatetotal">$0.00</span></div>
                                 </div>
                                 <hr>
                             </div>
                             <div class="text-start">
                                 <div class="row">
                                     <div class="col"><label class="col-form-label d-lg-flex justify-content-lg-start align-items-lg-center" style="font-size: 20px;" for="zanahoria">Zanahorias</label></div>
-                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center">$1.50 lb</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center" value=0.5 id="zanahoriavalor">$0.50 lb</span></div>
                                     <div class="col text-center d-lg-flex justify-content-lg-center align-items-lg-center">
-                                        <div class="btn-group" role="group"><button class="btn btn-success btn-sm text-end" type="button">+</button><button class="btn btn-danger btn-sm text-end" type="button" style="margin: 0px;margin-right: 10px;">-</button></div>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-success btn-xs button bi bi-cart-plus" type="button" name="zanahoriamas"></button>
+                                            <button class="btn btn-danger btn-xs button bi bi-cart-dash" type="button" name="zanahoriamenos" style="margin: 0px;margin-right: 10px;"></button>
+                                        </div>
                                     </div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" name="zanahoria" value="0" min="0" readonly=""></div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end">$0.00</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center">
+                                        <input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" id="zanahoria" value="0" min="0" readonly="">
+                                    </div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end" id="zanahoriatotal">$0.00</span></div>
                                 </div>
                                 <hr>
                             </div>
                             <div class="text-start">
                                 <div class="row">
                                     <div class="col"><label class="col-form-label d-lg-flex justify-content-lg-start align-items-lg-center" style="font-size: 20px;" for="cebolla">Cebollas</label></div>
-                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center">$1.50 lb</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center" value="2.3" id="cebollavalor">$2.30 lb</span></div>
                                     <div class="col text-center d-lg-flex justify-content-lg-center align-items-lg-center">
-                                        <div class="btn-group" role="group"><button class="btn btn-success btn-sm text-end" type="button">+</button><button class="btn btn-danger btn-sm text-end" type="button" style="margin: 0px;margin-right: 10px;">-</button></div>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-success btn-xs button bi bi-cart-plus" type="button" name="cebollamas"></button>
+                                            <button class="btn btn-danger btn-xs button bi bi-cart-dash" type="button" name="cebollamenos" style="margin: 0px;margin-right: 10px;"></button>
+                                        </div>
                                     </div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" name="cebolla" value="0" min="0" readonly=""></div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end">$0.00</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" id="cebolla" value="0" min="0" readonly=""></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end" id="cebollatotal">$0.00</span></div>
                                 </div>
                                 <hr>
                             </div>
                             <div class="text-start">
                                 <div class="row">
                                     <div class="col"><label class="col-form-label d-lg-flex justify-content-lg-start align-items-lg-center" style="font-size: 20px;" for="chile">Chile Verde</label></div>
-                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center">$1.50 lb</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center" value="1.75" id="chilevalor">$1.75 lb</span></div>
                                     <div class="col text-center d-lg-flex justify-content-lg-center align-items-lg-center">
-                                        <div class="btn-group" role="group"><button class="btn btn-success btn-sm text-end" type="button">+</button><button class="btn btn-danger btn-sm text-end" type="button" style="margin: 0px;margin-right: 10px;">-</button></div>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-success btn-xs button bi bi-cart-plus" type="button" name="chilemas"></button>
+                                            <button class="btn btn-danger btn-xs button bi bi-cart-dash" type="button" name="chilemenos" style="margin: 0px;margin-right: 10px;"></button>
+                                        </div>
                                     </div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" name="chile" value="0" min="0" readonly=""></div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end">$0.00</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" id="chile" value="0" min="0" readonly=""></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end" id="chiletotal">$0.00</span></div>
                                 </div>
                                 <hr>
                             </div>
                             <div class="text-start">
                                 <div class="row">
                                     <div class="col"><label class="col-form-label d-lg-flex justify-content-lg-start align-items-lg-center" style="font-size: 20px;" for="abono">Abono</label></div>
-                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center">$1.50 lb</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"><span class="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center" value="5.5" id="abonovalor">$5.50 lb</span></div>
                                     <div class="col text-center d-lg-flex justify-content-lg-center align-items-lg-center">
-                                        <div class="btn-group" role="group"><button class="btn btn-success btn-sm text-end" type="button">+</button><button class="btn btn-danger btn-sm text-end" type="button" style="margin: 0px;margin-right: 10px;">-</button></div>
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-success btn-xs button bi bi-cart-plus" type="button" name="abonomas"></button>
+                                            <button class="btn btn-danger btn-xs button bi bi-cart-dash" type="button" name="abonomenos" style="margin: 0px;margin-right: 10px;"></button>
+                                        </div>
                                     </div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" name="abono" value="0" min="0" readonly=""></div>
-                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end">$0.00</span></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><input class="form-control form-control-sm d-lg-flex justify-content-lg-center align-items-lg-center" type="number" id="abono" value="0" min="0" readonly=""></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end" id="abonototal">$0.00</span></div>
                                 </div>
                                 <hr>
                             </div>
+
+                            <div class="text-start">
+                                <div class="row">
+                                    <div class="col"><label class="col-form-label d-lg-flex justify-content-lg-start align-items-lg-center" style="font-size: 20px;" for="abono">Total a Cancelar</label></div>
+                                    <div class="col d-lg-flex justify-content-lg-center align-items-lg-center"></div>
+                                    <div class="col text-center d-lg-flex justify-content-lg-center align-items-lg-center">                                    </div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"></div>
+                                    <div class="col d-lg-flex justify-content-lg-end align-items-lg-center"><span class="d-lg-flex justify-content-xxl-end" id="subtotal">$0.00</span></div>
+                                </div>
+                                <hr>
+                            </div>
+
                             <div>
-                                <div class="btn-group" role="group"><button class="btn btn-success" type="button">Procesar Pago</button><button class="btn btn-danger" type="button">Reiniciar Compra</button></div>
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-success" type="button" name="process" id="process">Procesar Pago</button>
+                                    <button class="btn btn-danger" name="reset" type="button" id="reset">Reiniciar Compra</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -125,6 +161,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.min.js"></script>
+
+    <script src="assets/js/compras.js"></script>
 </body>
 
 </html>
